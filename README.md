@@ -10,7 +10,7 @@ This overview includes:
 - A list of words that are similar to the topic the user wanted to learn about.
 
 
-## Places for Improvement
+## Notable Places for Improvement
 
 1. The `keyphrase_extractor` function could be improved to be better at recognizing and extracting user intent. Currently it is only capable of determining intent when the sentence contains an object of preposition, or a direct object. Sentences that express intent using a nominal subject, such as "Do you know how flowers grow?", would not be understood and the user would be asked to rephrase their input. More complicated inputs that use multiple object of preposition or direct objects would also likely give unexpected results.
 2. The `find_similar_words` function could be improved to be more efficient in determining similar words, and likely more efficient with space and time as well. One way to potentially improve the ability to find similar words would be to use spaCy to compare the similarity of the lemma of two words, as opposed to the words themselves. There are also likely ways to improve space / time efficiency by parsing down the list of words to check against the user's topic further so that we run the NLP pipeline fewer times.
